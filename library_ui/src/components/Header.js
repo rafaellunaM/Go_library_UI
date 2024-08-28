@@ -13,6 +13,15 @@ const Header = () => {
         <NavLink to="/add" className="link" activeClassName="active">
           Adicionar livros
         </NavLink>
+        <NavLink to="/delete" className="link" activeClassName="active">
+          Remover livros
+        </NavLink>
+        <NavLink to="/find" className="link" activeClassName="active">
+          Buscar livros
+        </NavLink>
+        <NavLink to="/edit" className="link" activeClassName="active">
+          editar livros
+        </NavLink>
       </div>
     </header>
   );
