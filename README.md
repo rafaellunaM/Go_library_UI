@@ -20,3 +20,6 @@
 * http://localhost:3000/edit
 * http://localhost:3000/delete
 
+# Build project:
+* docker build -f Dockerfile -t librari_ui:1.0 .
+* docker run -p 80:80 librari_ui:1.0
