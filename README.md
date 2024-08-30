@@ -18,4 +18,5 @@
 * http://localhost:3000/add
 * http://localhost:3000/find
 * http://localhost:3000/edit
+* http://localhost:3000/delete
 
