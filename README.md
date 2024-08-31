@@ -20,6 +20,11 @@
 * http://localhost:3000/edit
 * http://localhost:3000/delete
 
+# Start project:
+* after project clone: cd library_ui
+* yarn install
+* yarn start
+
 # Build project:
 * docker build -f Dockerfile -t librari_ui:1.0 .
 * docker run -p 80:80 librari_ui:1.0
