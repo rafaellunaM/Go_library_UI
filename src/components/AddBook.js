@@ -15,8 +15,8 @@ const BookForm = () => {
 
   const handleFetchBookBook = (e) =>{
     e.preventDefault();
-
-    fetch(`http://localhost:8080/books`)
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+    fetch(`${backendUrl}/books`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Livro não encontrado ou erro de rede');
@@ -41,7 +41,8 @@ const BookForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = { bookid, title, author, quantity, category, price, availability };
-    fetch(`http://localhost:8080/books`, {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+    fetch(`${backendUrl}/books`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

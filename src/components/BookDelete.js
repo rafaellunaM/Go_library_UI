@@ -9,8 +9,8 @@ const BookDelete = () => {
 
   const handleDeleteBook = (e) => {
     e.preventDefault();
-
-    fetch(`http://localhost:8080/books/${bookId}`, {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+    fetch(`${backendUrl}/books/${bookId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

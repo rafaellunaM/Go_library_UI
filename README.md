@@ -26,5 +26,5 @@
 * yarn start
 
 # Build project:
-* docker build -f Dockerfile -t librari_ui:1.0 .
-* docker run -p 80:80 librari_ui:1.0
+* docker build -f Dockerfile -t library_ui:1.0 .
+* docker run -p 80:80 library_ui:1.0

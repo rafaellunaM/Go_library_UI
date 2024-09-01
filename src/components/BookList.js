@@ -6,7 +6,8 @@ const BooksList = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8080/books')
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+    fetch(`${backendUrl}/books`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

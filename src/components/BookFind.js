@@ -7,8 +7,9 @@ const BookFind = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
 
-    fetch(`http://localhost:8080/books/${bookId}`)
+    fetch(`${backendUrl}/books/${bookId}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Livro não encontrado ou erro de rede');
